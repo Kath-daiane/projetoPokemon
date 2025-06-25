@@ -1,4 +1,3 @@
-// Dados dos Pokémons
 const pokemons = {
     pikachu: {
         nome: "Pikachu",
@@ -23,28 +22,31 @@ const pokemons = {
     }
 };
 
-// Seleciona os elementos do DOM
+// Elementos do DOM
 const img = document.getElementById("pokemon-img");
 const nome = document.getElementById("pokemon-name");
 const tipo = document.getElementById("pokemon-type");
 const listaAtaques = document.getElementById("attacks-list");
 const card = document.getElementById("pokemon-card");
+const attacksContainer = document.getElementById("attacks-container");
 
 // Botões
 document.getElementById("btn-pokemon-1").addEventListener("click", () => mostrarPokemon("pikachu"));
 document.getElementById("btn-pokemon-2").addEventListener("click", () => mostrarPokemon("charmander"));
 document.getElementById("btn-pokemon-3").addEventListener("click", () => mostrarPokemon("squirtle"));
 
-// Função principal
 function mostrarPokemon(pokemon) {
     const dados = pokemons[pokemon];
+
+    // Mostra imagem e ataques
+    img.style.display = "block";
+    attacksContainer.style.display = "block";
 
     img.src = dados.imagem;
     img.alt = dados.nome;
     nome.innerText = dados.nome;
     tipo.innerText = `Tipo: ${dados.tipo}`;
-    
-    // Atualiza lista de ataques
+
     listaAtaques.innerHTML = "";
     dados.ataques.forEach(ataque => {
         const li = document.createElement("li");
@@ -52,6 +54,5 @@ function mostrarPokemon(pokemon) {
         listaAtaques.appendChild(li);
     });
 
-    // Atualiza a cor do card
     card.style.backgroundColor = dados.cor;
 }
