@@ -3,23 +3,23 @@ const pokemons = {
     pikachu: {
         nome: "Pikachu",
         tipo: "Elétrico",
-        imagem: "images/pikachu.png",
+        imagem: "imgs/pikachu.png",
         ataques: ["Choque do Trovão", "Ataque Rápido", "Investida Elétrica"],
-        cor: "#fdd835" // Amarelo
+        cor: "#fdd835"
     },
     charmander: {
         nome: "Charmander",
         tipo: "Fogo",
-        imagem: "images/charmander.png",
+        imagem: "imgs/charmander.png",
         ataques: ["Lança-chamas", "Garra de Fogo", "Investida"],
-        cor: "#ff7043" // Laranja avermelhado
+        cor: "#ff7043"
     },
     squirtle: {
         nome: "Squirtle",
         tipo: "Água",
-        imagem: "images/squirtle.png",
+        imagem: "imgs/squirtle.png",
         ataques: ["Jato d'Água", "Bolhas", "Cauda de Água"],
-        cor: "#4fc3f7" // Azul claro
+        cor: "#4fc3f7"
     }
 };
 
@@ -44,7 +44,7 @@ function mostrarPokemon(pokemon) {
     nome.innerText = dados.nome;
     tipo.innerText = `Tipo: ${dados.tipo}`;
     
-    // Atualiza ataques
+    // Atualiza lista de ataques
     listaAtaques.innerHTML = "";
     dados.ataques.forEach(ataque => {
         const li = document.createElement("li");
@@ -52,6 +52,6 @@ function mostrarPokemon(pokemon) {
         listaAtaques.appendChild(li);
     });
 
-    // Atualiza cor do fundo do card
+    // Atualiza a cor do card
     card.style.backgroundColor = dados.cor;
 }
