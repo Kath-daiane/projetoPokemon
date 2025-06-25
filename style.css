@@ -6,7 +6,8 @@
 }
 
 body {
-    background-color: #f0f0f0;
+    background-color: #2c2c2c;
+    color: white; /* garante contraste para textos fora do card */
     padding: 20px;
 }
 
