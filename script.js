@@ -2,21 +2,21 @@ const pokemons = {
     pikachu: {
         nome: "Pikachu",
         tipo: "Elétrico",
-        imagem: "imgs/pikachu.png",
+        imagem: "img/pikachu.png",
         ataques: ["Choque do Trovão", "Ataque Rápido", "Investida Elétrica"],
         cor: "#fdd835"
     },
     charmander: {
         nome: "Charmander",
         tipo: "Fogo",
-        imagem: "imgs/charmander.png",
+        imagem: "img/charmander.png",
         ataques: ["Lança-chamas", "Garra de Fogo", "Investida"],
         cor: "#ff7043"
     },
     squirtle: {
         nome: "Squirtle",
         tipo: "Água",
-        imagem: "imgs/squirtle.png",
+        imagem: "img/squirtle.png",
         ataques: ["Jato d'Água", "Bolhas", "Cauda de Água"],
         cor: "#4fc3f7"
     }
